@@ -1,10 +1,10 @@
 ---
-- name: Install the apache web service
+- name: Install the nginx web service
   hosts: web
   become: yes
 
   tasks:
-   - name: install apache
-     yum:
+   - name: install nginx
+     apt:
        name: httpd
        state: present
